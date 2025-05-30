@@ -1,0 +1,14 @@
+- name: nfs install and run
+  hosts: frontend
+  become: yes # sudo access
+  tasks:
+  - name: install nfs-utils server
+    ansible.builtin.package:
+      name: nginx
+      state: latest
+
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes

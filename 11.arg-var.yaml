@@ -1,0 +1,24 @@
+- name: variables from inventory
+  hosts: local
+  connection: local
+  vars:
+    list1:  # lists defined -
+    - apple
+    - banana
+    - grapes
+    list2:
+    - peach
+    - plum
+    - pear
+  tasks:
+  - name: print course info
+    ansible.builtin.debug:
+      msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
+  
+  - name: combined of lists
+    ansible.builtin.set_fact:
+      merged_list: "{{ list1 + list2 }}"
+  
+  - name: Show merged list1
+    debug:
+      var: merged_list   

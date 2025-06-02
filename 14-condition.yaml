@@ -12,5 +12,4 @@
   - name: peint number is greter than 100
     ansible.builtin.debug:
       msg: "Given number {{ NUMBER }} is reter than 100"
-    when: NUMBER > 100
-    
+    when:  NUMBER  > 100

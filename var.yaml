@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    list1:
+    list1:  # lists defined -
     - apple
     - banana
     - grapes
@@ -10,6 +10,18 @@
     - peach
     - plum
     - pear
+
+  
+    dict1:
+      name: Leeroy Jenkins
+      age: 25
+      occupation: Astronaut
+
+    dict2:
+      location: Galway
+      country: Ireland
+      postcode: H71 1234
+
     COURSE: Devops
     DURATION: 10HR
     TRAINER: Shiva

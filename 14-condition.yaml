@@ -3,7 +3,7 @@
   hosts: local
   connection: local
   vars:
-    NUMBER: 79
+    NUMBER: 120
   tasks:
   - name: print the number is less than equalt to 100
     ansible.builtin.debug:

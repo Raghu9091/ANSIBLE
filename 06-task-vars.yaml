@@ -15,4 +15,4 @@
   - name: print course information again
     #vars refarence should be surrounded by
     ansible.builtin.debug:
-      msg: "hello {{ COURSE }}, course duraton {{ DURATION }}, trainer is {{ TRAINEE}}"
+      msg: "hello {{ COURSE }}, course duraton {{ DURATION }}, trainer is {{ TRAINER }}"

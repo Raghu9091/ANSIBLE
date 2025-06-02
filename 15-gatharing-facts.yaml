@@ -1,8 +1,8 @@
-- name: gatharing facts
+- name: gatharing facts  
   hosts: local
   connection: local
   tasks:
   - name: print facts
     ansible.builtin.debug:
-      msg: "{{ ansible_facts }}"
+      msg: "{{ ansible_facts }}" # default variable checking the ansible and print
   

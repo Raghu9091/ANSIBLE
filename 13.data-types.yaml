@@ -13,11 +13,11 @@
       CI: Jenkins
       SCRIPTING: "SHELL ANSIBLE, Terraform, PYthon"
  
-  # tasks:
-  # - name: print course info
-  #   ansible.builtin.debug:
-  #     msg: " Course is: {{ COURSE }}, Duration: {{ DURATION }}, is live?: {{ IS_LIVE }}, Tools are: {{ TOOLS }}, Concepts are: {{ CONCETPS }} " 
   tasks:
   - name: print course info
+    ansible.builtin.debug:
+      msg: " Course is: {{ COURSE }}, Duration: {{ DURATION }}, is live?: {{ IS_LIVE }}, Tools are: {{ TOOLS }}, Concepts are: {{ CONCEPTS }} " 
+  tasks:
+  - name: print course info 2nd time
     ansible.builtin.debug:
       msg: "Course is: {{ COURSE }}, Duration: {{ DURATION }}, is live?: {{ IS_LIVE }}, Tools are: {{ TOOLS }}, Concepts are: {{ CONCEPTS }}"

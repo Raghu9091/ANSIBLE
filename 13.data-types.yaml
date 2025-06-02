@@ -1,7 +1,7 @@
 - name: ansible data types
   hosts: local
   connection: local
-  tasks:
+  vars:
     DURATION: 120 # this is number
     COURSE: "DevOPS with Aws"
     IS_Live: true
@@ -9,4 +9,11 @@
     - linux
     - shell
     - ansible
+    CONCEPTS: # map or directory or object. refferes like {}
+      CI: Jenkins
+      SCRIPTING: "SHELL ANSIBLE, Terraform, PYthon"
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Course is: {{ COURSE }}, Duration: {{ DURATION }}, is live?: {{ IS_LIVE }}, Tools are: {{ TOOLS }}, Concepts are: {{ CONCETPS }}" 
     

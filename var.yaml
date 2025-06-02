@@ -46,5 +46,5 @@
       merged_dict: " {{ dict1 | combine(dict2) }} "
   
   - name: Show merged dictionary
-      debug:
-        var: merged_dict
+    debug:
+      var: merged_dict

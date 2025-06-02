@@ -6,7 +6,7 @@
   vars_files:
   - course.yaml
   vars_prompt:
-  - name: GREETING
+  - name: GREETING1
     prompt: Please enter the greeting
     private: false
   tasks:
@@ -14,7 +14,7 @@
     # vars:
     #   GREETING: "Hello from TASK"
     ansible.builtin.debug:
-      msg: "{{ GREETING }}"
+      msg: " hello raghu :{{ GREETING1 } }"
 
 # 1. command line or args
 # 2. Task

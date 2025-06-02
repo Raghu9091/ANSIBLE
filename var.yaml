@@ -2,6 +2,14 @@
   hosts: local
   connection: local
   vars:
+    list1:
+    - apple
+    - banana
+    - grapes
+    list2:
+    - peach
+    - plum
+    - pear
     COURSE: Devops
     DURATION: 10HR
     TRAINER: Shiva
@@ -17,4 +25,10 @@
     ansible.builtin.debug:
       msg: "hello {{ COURSE }}, course duraton {{ DURATION }}, trainer is {{ TRAINEE}}
   
+  - name: combined of lists
+    ansible.builtin.set_fact:
+      merged_list: "{{ list1 + list2 }}"
   
+  - name: Combine dict1 and dict2 into a merged_dict var
+    ansible.builtin.set_fact:
+      merged_dict: "{{ list1 | ansible.builtin.combine(list2) }}"

@@ -43,4 +43,8 @@
   
   - name: Combine dict1 and dict2 into a merged_dict var
     ansible.builtin.set_fact:
-      merged_dict: " {{ list1 | combine(list2) }} "
+      merged_dict: " {{ dict1 | combine(dict2) }} "
+  
+  - name: Show merged dictionary
+      debug:
+        var: merged_dict

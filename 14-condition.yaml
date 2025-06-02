@@ -2,7 +2,12 @@
   hosts: local
   conmnection: local
   vars:
-    NUMBER: 78
+    NUMBER: {{ item }}
+  loop:
+  - 20
+  - 30
+  - 100
+  
   tasks:
   - name: print the number is less than equalt to 100
     ansible.builtin.debug:

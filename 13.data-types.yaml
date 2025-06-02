@@ -4,7 +4,7 @@
   vars:
     DURATION: 120 # this is number
     COURSE: "DevOPS with Aws"
-    IS_Live: true
+    IS_LIVE: true
     TOOLS: #list[]
     - linux
     - shell

@@ -5,7 +5,7 @@
     DURATION: 120 # this is number
     COURSE: "DevOPS with Aws"
     IS_Live: true
-    TOOLS: list[]
+    TOOLS: #list[]
     - linux
     - shell
     - ansible

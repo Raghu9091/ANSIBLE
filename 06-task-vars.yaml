@@ -24,9 +24,11 @@
     #vars refarence should be surrounded by
     ansible.builtin.debug:
       msg: "hello {{ COURSE }}, course duraton {{ DURATION }}, trainer is {{ TRAINEE}}
+  
   - name: combined of lists
     ansible.builtin.set_fact:
       merged_list: "{{ list1 + list2 }}"
+  
   - name: Combine dict1 and dict2 into a merged_dict var
     ansible.builtin.set_fact:
       merged_dict: "{{ dict1 | ansible.builtin.combine(dict2) }}"

@@ -1,6 +1,7 @@
 - name: install nginx
   hosts: dynamic_frontend
   become: yes
+  serial: 5  # excuting instances
   tasks:
   - name: install nginx
     ansible.builtin.dnf:
@@ -11,4 +12,4 @@
       name: nginx
       state: started
       enabled: yes
-# pparallaly connceted fork
+# parallaly connceted fork

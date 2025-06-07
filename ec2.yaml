@@ -6,5 +6,6 @@ keyed_groups:
     prefix: tag
 filters:
   instance-state-name: running
+  #tag:Environment: prod
 hostnames:
   - private-ip-address
